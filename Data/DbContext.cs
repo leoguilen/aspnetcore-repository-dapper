@@ -10,7 +10,7 @@ namespace repository_dapper.Data
         {
             _dbProvider = providerType switch {
                 "SQLServer" => _dbProvider = new SqlServerProvider(),
-                "Postgres" => _dbProvider = new PostgresProvider(),
+                "MySql" => _dbProvider = new MySqlProvider(),
                 _ => null
             };
 

@@ -3,7 +3,7 @@ using Dapper.Contrib.Extensions;
 
 namespace repository_dapper.Features.User
 {
-    [Table("users")]
+    [Table("Users")]
     public class UserDto
     {
         [ExplicitKey]

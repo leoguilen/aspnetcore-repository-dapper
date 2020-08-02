@@ -29,7 +29,7 @@ namespace repository_dapper.Repository
             { 
                 var results = await DbConnection
                     .GetAllAsync<TEntity>(); 
-
+                  
                 return results
                     .AsQueryable();
             } 
@@ -56,7 +56,7 @@ namespace repository_dapper.Repository
             {
                 var inserted = await DbConnection
                 .InsertAsync<TEntity>(entity);
-            
+                
                 return inserted == 0;
             }
             finally { DbConnection.Close(); }
