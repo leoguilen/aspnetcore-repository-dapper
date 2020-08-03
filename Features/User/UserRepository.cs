@@ -33,7 +33,7 @@ namespace repository_dapper.Features.User
 
         public async Task<bool> InsertUserAsync(UserDto user)
         {
-            user.Id = Guid.NewGuid();
+            user.Id = Guid.NewGuid().ToString();
             user.CreatedAt = DateTime.Now;
 
             return await CreateAsync(user);
